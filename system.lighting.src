@@ -1,0 +1,21 @@
+int led_G = 3;
+int pushButton_1 = 4;
+int pushButton_2 = 5;
+
+void setup()
+{
+  pinMode(led_G, OUTPUT);
+  pinMode(pushButton_1, INPUT);
+  pinMode(pushButton_2, INPUT);
+  
+  digitalWrite(led_G, LOW);
+}
+
+void loop()
+{
+  if(digitalRead(pushButton_1) == HIGH) {
+    digitalWrite(led_G, HIGH);
+  } else if (digitalRead(pushButton_2) == HIGH) {
+    digitalWrite(led_G, LOW);
+  }
+}
